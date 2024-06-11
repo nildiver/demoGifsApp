@@ -1,0 +1,17 @@
+<div class="d-flex justify-content-cennter ">
+   <img
+ [src]="url"
+ [alt]="alt"
+ class="card-img-top animate_animate animate_fadeIn"
+ (load)="onload()"
+ [ngStyle]="{display:hasLoaded ? '' :'none'}"
+   >
+   <img
+   *ngIf="!hasLoaded"
+   src="assets/loader.svg"
+   height="35"
+   width="35"
+   class="mt-3"
+   >
+
+</div>
